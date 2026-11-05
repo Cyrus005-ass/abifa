@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Générateur d'affiche — Participant ABIFA 2026</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <section class="panel">
+    <h1>Créer mon affiche ABIFA 2026</h1>
+    <p class="intro">Renseignez vos informations et ajoutez votre portrait. L'affiche se met à jour automatiquement. Vous pourrez ensuite la télécharger en image PNG.</p>
+
+    <label for="firstName">Prénom et nom</label>
+    <input id="firstName" type="text" placeholder="Prénom NOM" maxlength="38">
+
+    <label for="city">Ville, Pays</label>
+    <input id="city" type="text" placeholder="Ville, Pays" maxlength="45">
+
+    <label for="photo">Votre photo</label>
+    <input id="photo" type="file" accept="image/*">
+    <p class="hint">Conseil : choisissez une photo portrait, nette et bien éclairée. Elle sera cadrée dans le cercle.</p>
+
+    <div class="actions">
+      <button class="primary" id="download" type="button">Télécharger mon affiche</button>
+      <button class="secondary" id="reset" type="button">Réinitialiser</button>
+    </div>
+    <p class="hint">Format carré haute définition (1200 × 1200 px).</p>
+  </section>
+
+  <section class="preview">
+    <div class="preview-head">
+      <strong>Aperçu de votre affiche</strong>
+      <span>ABIFA · Hackathon 2026</span>
+    </div>
+    <div class="canvas-wrap">
+      <canvas id="poster" width="1200" height="1200"></canvas>
+    </div>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+

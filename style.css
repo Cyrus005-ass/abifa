@@ -1,0 +1,142 @@
+﻿:root {
+    --navy: #16456f;
+    --orange: #f58227;
+    --ink: #173f66;
+    --paper: #f3f6f9;
+    --bg: #eef2f6;
+    --text: #172b3a;
+    --muted: #657687;
+    --border: #d6e0e8;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .app {
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 28px;
+    display: grid;
+    grid-template-columns: minmax(320px, 390px) minmax(0, 1fr);
+    gap: 28px;
+    align-items: start;
+  }
+
+  /* ---------- Panneau de saisie ---------- */
+  .panel {
+    background: #fff;
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 8px 30px rgba(23, 63, 102, 0.08);
+    position: sticky;
+    top: 20px;
+  }
+
+  h1 {
+    font-size: 22px;
+    margin: 0 0 8px;
+    color: var(--ink);
+  }
+
+  .intro {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 0 0 22px;
+  }
+
+  label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 15px 0 7px;
+    color: #334b60;
+  }
+
+  input[type="text"],
+  input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: #fff;
+    font: inherit;
+    font-size: 14px;
+  }
+
+  input:focus {
+    outline: 2px solid rgba(245, 130, 39, 0.33);
+    border-color: var(--orange);
+  }
+
+  .hint {
+    font-size: 12px;
+    color: #7b8995;
+    margin-top: 6px;
+  }
+
+  .actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 22px;
+    flex-wrap: wrap;
+  }
+
+  button {
+    border: 0;
+    border-radius: 10px;
+    padding: 13px 17px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 14px;
+    font: inherit;
+  }
+
+  .primary {
+    background: var(--orange);
+    color: #fff;
+    flex: 1;
+  }
+
+  .secondary {
+    background: #eaf0f5;
+    color: #244866;
+  }
+
+  /* ---------- Aperçu ---------- */
+  .preview { min-width: 0; }
+
+  .preview-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 12px;
+    color: #53687a;
+    font-size: 13px;
+  }
+
+  .canvas-wrap {
+    background: #dce4eb;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 8px 30px rgba(23, 63, 102, 0.08);
+  }
+
+  canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: var(--navy);
+    border-radius: 5px;
+  }
+
+  @media (max-width: 850px) {
+    .app { grid-template-columns: 1fr; padding: 14px; }
+    .panel { position: static; }
+  }
