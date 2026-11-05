@@ -134,21 +134,21 @@ function draw() {
   ctx.fillStyle = '#f58227';
   ctx.fillRect(0, 1000, 1200, 8);
 
-  /* bas.png centré en bas */
-  if (basImg) {
-    const bw = 90, bh = 90;
-    const bx = (W - bw) / 2;
-    ctx.drawImage(basImg, bx, 1012, bw, bh);
-  }
-
   ctx.fillStyle = '#16456f';
   ctx.font = 'bold 24px Arial';
   ctx.textAlign = 'center';
-  ctx.fillText('FORMATION · INNOVATION · ENTREPRENEURIAT', W / 2, 1115);
+  ctx.fillText('FORMATION · INNOVATION · ENTREPRENEURIAT', W / 2, 1060);
+
+  /* bas.png centré entre les deux lignes de texte */
+  if (basImg) {
+    const bw = 70, bh = 70;
+    const bx = (W - bw) / 2;
+    ctx.drawImage(basImg, bx, 1075, bw, bh);
+  }
 
   ctx.fillStyle = '#283746';
   ctx.font = '24px Arial';
-  ctx.fillText('abifadagori.com · Agori, Bénin', W / 2, 1152);
+  ctx.fillText('abifadagori.com · Agori, Bénin', W / 2, 1140);
 
   /* QR code en bas à droite */
   if (qrImg) {
